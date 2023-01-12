@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+:root {
+    --main-color: #0c0f27;
+    --border: 0.1rem solid rgba(255, 255, 255, 0.3);
+}
+* {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    /* transition: 0.2s linear; */
+}
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+a {
+    text-decoration: none;
+}
+.main-nav {
+    /* background-color: blue; */
+    width: 100%;
+    height: 8rem;
+    display: grid;
+    grid-template-columns: 3rem 1fr 2fr 1fr 3rem;
+    border-bottom: 1px solid black;
+}
+.logo {
+    grid-column: 2/3;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 30px;
+    align-items: center;
+    /* border: 2px solid red; */
+}
+.logo img {
+    width: 50%;
+    height: 70%;
+    display: block;
+    /* border: 2px solid black; */
+    /* margin: auto; */
+}
+.menu-links ul {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: 25px;
+    justify-content: space-around;
+    list-style: none;
+}
+.menu-links ul li a {
+    text-transform: capitalize;
+    text-decoration: none;
+    font-size: 2rem;
+    color: black;
+}
+.menu-links ul li a:hover {
+    color: orange;
+    border-bottom: 0.1rem solid orange;
+    padding-bottom: 0.5rem;
+}
+.login-signup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+button {
+    cursor: pointer;
+    border: 0;
+    border-radius: 4px;
+    font-weight: 600;
+    margin: 0 10px;
+    width: 100px;
+    padding: 10px 0;
+    /* box-shadow: 0 0px 20px 0px rgba(0, 0, 255/20%); */
+    /* x y blur spread*/
+    transition: 0.4s;
+}
+
+.log-in {
+    color: #4b4b4d;
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid #fbd64a;
+}
+.sign-up {
+    color: white;
+    /* background-color: rgba(104, 85, 224, 1); */
+    background-color: #fbd64a;
+}
+.log-in:hover {
+    color: white;
+    /* width: ; */
+    /* box-shadow: 0 0 25px 5px lightgrey; */
+    background-color: #fbd54a;
+}
+.sign-up:hover {
+    background-color: #ebc22b;
+}
