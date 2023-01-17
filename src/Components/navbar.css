@@ -26,6 +26,8 @@ a {
 .main-nav {
     /* background-color: blue; */
     width: 100%;
+    max-width: 1440px;
+    margin: auto;
     height: 8rem;
     display: grid;
     grid-template-columns: 3rem 1fr 2fr 1fr 3rem;

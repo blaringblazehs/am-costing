@@ -1,5 +1,6 @@
 .hero-section-container {
     width: 90%;
+    max-width: 1296px;
     margin: auto;
     height: 90vh;
     display: grid;
@@ -50,9 +51,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    /* background-color: red; */
 }
 .dropzone.active {
-    border-color: darkgrey;
+    border-color: black;
+    /* background-color: blue; */
 }
 .upload-btn-container {
     display: flex;
