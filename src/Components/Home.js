@@ -91,7 +91,7 @@ const Home = () => {
         const data = readerEvent.target.result;
         const params = new URLSearchParams();
         params.set("name", file.name);
-        params.set("size", file.size);
+        // params.set("size", file.size);
         params.set("currentChunkIndex", currentChunkIndex);
         params.set("totalChunks", Math.ceil(file.size / chunkSize));
         const headers = { "Content-Type": "application/octet-stream" };
@@ -103,15 +103,17 @@ const Home = () => {
             const isLastChunk = currentChunkIndex === chunks;
             if (isLastChunk) {
                 file.finalFilename = response.data.finalFilename;
+                //if we have uploaded last chunk of first file upload the next file
                 setLastUploadedFileIndex(currentFileIndex);
                 setCurrentChunkIndex(null);
             } else {
+                //if not the last chunk start uploading next chunk
                 setCurrentChunkIndex(currentChunkIndex + 1);
             }
             console.log("my res -", response);
         });
     }
-
+    //this will run when the file finishes uploading
     useEffect(() => {
         if (lastUploadedFileIndex === null) {
             return;
